@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{palatino}
+\parindent=0em
+\parskip=1em
+
+\newcommand{\lhmone}{\begin[staffsize=20]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  g g a2 g1
+}
+\addlyrics{Lord have mer- cy}
+\end{lilypond}}
+
+\newcommand{\amenone}{\begin[staffsize=20]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4
+  g2
+  \time 4/4
+  g1
+}
+\addlyrics{A- men}
+\end{lilypond}}
+
+\newcommand{\tyolone}{\begin[staffsize=20]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4
+  a2
+  \time 4/4
+  g2 f2 e1
+}
+\addlyrics{To You O Lord}
+\end{lilypond}}
+
+\begin{document}
+\begin{center}
+{\Large The Great Litany} \\
+\end{center}
+
+In peace, let us pray to the Lord.
+
+\lhmone
+
+For the peace from above and for the salvation of our souls, let us pray to the Lord.
+
+\lhmone
+
+For the peace of the whole world, for the stability of the holy churches of God, and for the unity of all, let us pray to the Lord.
+
+\lhmone
+
+For this holy house and for those who enter it with faith, reverence, and the fear of God, let us pray to the Lord.
+
+\lhmone
+
+For pious and Orthodox Christians, let us pray to the Lord.
+
+\lhmone
+
+For (episcopal rank) (name), for the honorable presbyterate, for the diaconate in Christ, and for all the clergy and the people, let us pray to the Lord.
+
+\lhmone
+
+For our country, for the president, and for all in public service, let us pray to the Lord.
+
+\lhmone
+
+For this city, and for every city and land, and for the faithful who live in them, let us pray to the Lord.
+
+\lhmone
+
+For favorable weather, for an abundance of the fruits of the earth, and for peaceful times, let us pray to the Lord.
+
+\lhmone
+
+For those who travel by land, sea, and air, for the sick, the suffering, the captives and for their salvation, let us pray to the Lord.
+
+\lhmone
+
+For our deliverance from all affliction, wrath, danger, and necessity, let us pray to the Lord.
+
+\lhmone
+
+Help us, save us, have mercy on us, and protect us, O God, by Your grace.
+
+\amenone
+
+Commemorating our most holy, pure, blessed, and glorious Lady, the Theotokos and ever-virgin Mary, with all the saints, let us commend ourselves and one another and our whole life to Christ our God.
+
+\tyolone
+
+\end{document}
