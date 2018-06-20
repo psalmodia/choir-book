@@ -1,0 +1,426 @@
+\documentclass[12pt,letter]{article}
+\usepackage{palatino}
+\usepackage{color}
+\usepackage{pdfpages}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek, english]{babel}
+\usepackage[LGR,T1]{fontenc}
+ 
+\textwidth=6.5truein
+\textheight=9truein
+\topmargin=-0.8truein
+\oddsidemargin=0truein
+\evensidemargin=0truein
+\parindent=0em
+\parskip=1em
+
+\newcommand{\HolyGod}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  b( a g f g2) e2 f2( g2)
+}
+\addlyrics{Ho- ly God}
+\end{lilypond}}
+
+\newcommand{\HolyMighty}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  b( a g f g2) e2 f2 g2
+}
+\addlyrics{Ho- ly Migh- ty}
+\end{lilypond}}
+
+\newcommand{\HolyImmortal}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  g e f( g) b( a g f)
+  \time 2/4
+  e2
+}
+\addlyrics{Ho- ly Im- mor- tal}
+\end{lilypond}}
+
+\newcommand{\Havemercy}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 1/4
+  g4
+  \time 4/4
+  %b2( a2) g2 f8( e8 f4) g8( a8 g2.)
+  b2( a) g f g1
+}
+\addlyrics{%
+Have mer- cy on us}
+\end{lilypond}}
+
+\newcommand{\PollaEti}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g g g g
+  \time 3/4
+  g a2
+  \time 4/4
+  a2 g2
+}
+\addlyrics{Eis pol- la e- ti Des po ta}
+\end{lilypond}}
+
+\newcommand{\NeDynamis}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  g( a) c( b) a8( b8 a8 g8) g2
+}
+\addlyrics{%
+%Ne Dy- na- mis
+Νέ Δύ- να- μις}
+\end{lilypond}}
+
+\newcommand{\ThriceHoly}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \override Score.BarNumber.break-visibility = ##(#f #f #f)
+  b( a g f g2) e f( g)
+  b4( a g f g2) e f g
+  g4 e f( g) b( a g f) e2. g4
+  %b2( a2) g2 f8( e8 f4) g8( a8 g1)
+  b2( a) g f g1
+}
+\addlyrics{%
+Ho- ly God
+Ho- ly Migh- ty
+Ho- ly Im- mor- tal
+have mer- cy on us}
+\end{lilypond}}
+
+\newcommand{\ThriceHolyGreek}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \override Score.BarNumber.break-visibility = ##(#f #f #f)
+  b( a) g( f) g2 e f g
+  b4( a) g( f) g2 e f g
+  g4 e f g b( a) g( f) e2. g4
+  %b2 a2 g2 f8( e8 f4) g8( a8 g1)
+  b2 a g f g1
+}
+\addlyrics{%
+Ἅ- γι- ος ὁ Θε- ός
+Ἅ- γι- ος Ἰσ- χυ- ρός
+Ἅ- γι- ος Α- θά- να- τος ἐ-
+λέ- η- σον ἡ- μᾶς
+}
+\end{lilypond}}
+
+\newcommand{\GloryHolyImmortal}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \override Score.BarNumber.break-visibility = ##(#f #f #f)
+  \cadenzaOn
+  g8 g g g g g g g g g2 \bar "|"
+  g8 g g g g a2 g2 \bar "|"
+  g8 g g g g g g g g g g a2 a2 a2 g2 \bar "|"
+  \cadenzaOff
+  g4 e f( g) b( a g f) e2. g4
+  %b2( a2) g2 f8( e8 f4) g8( a8 g1)
+  b2( a) g f g1
+}
+\addlyrics{%
+  Glo- ry to the Fa- ther and to the Son and to the Ho- ly Spi- rit
+  Both now and ev- er and to the a- ges of a- ges A- men
+  Ho- ly Im- mor- tal
+ have mer- cy on us}
+\end{lilypond}}
+
+\newcommand{\fimi}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \partial 2 g g | e( f g a)
+  \time 6/4
+  g4. g8 g4 g fis g
+  \time 4/4
+  a b a g a b c b
+  \time 3/4
+  a g f
+  \time 4/4
+  e8( f g a) g2
+  g4 e f g
+  a4 a g fis
+  b4 a g f
+  e2. e4
+  b'2 a4 b
+  c b a g
+  \time 6/4
+  g8( a b a) g4. g8 b4 a
+  \time 4/4
+  g4( f8 e f4 g)
+  a2( g)
+}
+\addlyrics{%
+Νι- κο- λά-
+ου του σε- βα- σμι- ο-
+τά- του και Θε-
+ο- προ- βλή- του
+μη- τρο- πο-
+λί- του
+της Α- γι- ω-
+τά- της Μη- τρο-
+πό- λε- ως Ντη-
+τρόϊτ η-
+μών δε πα-
+τρός και ποι- με-
+νάρ- χου πολ- λά τα
+έ-
+τη}
+\end{lilypond}}
+
+\newcommand{\LordLookDown}{Lord, Lord, look down from heaven and
+behold the vineyard which Your right hand has planted.}
+
+\newcommand{\LordLookDownGreek}{\selectlanguage{greek} Κύριε, Κύριε,
+επίβλεψον εξ ουρανού και ίδε, και επίσκεψε την άμπελον ταύτην και
+δατάρτησαι αυτήν, ην εφύτευσεν η δεξιά σου.  \selectlanguage{english}}
+
+\newcommand{\MetropolitanchantsLordlookdownfromheaven}{%
+  \vspace{-1em}
+  \begin{quote}
+    \textit{\LordLookDown}
+
+    \LordLookDownGreek
+  \end{quote}
+  \vspace{-1em}
+}
+
+\newcommand{\Lordsavethefaithful}{\begin[staffsize=25]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key f \major
+  \time 4/4
+  f2 f4 f
+  g4.( f8 g4 a)
+  f2. f4
+  a4( g f e)
+  f1
+}
+\addlyrics{%
+Lord, save the
+faith-
+ful, the
+faith- ful.}
+\end{lilypond}}
+
+\newcommand{\TonDespotin}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  \partial 2 g4 g
+  \time 6/4
+  e4( f g a) g2
+  \time 4/4
+  g4 g g g
+  \time 6/4
+  b4( a) g f e2
+  \time 4/4
+  g2 g8( f8) e4
+  \time 6/4
+  b'4 a g2 g4 g
+  \time 4/4
+  a2 g8( f8) e4
+  \time 6/4
+  f4 g g2 g4 g
+  \time 4/4
+  a2 g8( f8) e4
+  \time 6/4
+  b'4 a g2 g4 a
+  \time 4/4
+  b2 a4 g
+  \time 6/4
+  g8( f) e4 f2.( g4 a2 g1)
+}
+\addlyrics{%
+Τὸν Δεσ-
+πό- την
+καὶ Ἀρ- χι- ε-
+ρέ- α ἡ- μῶν,
+Κύ- ρι- ε
+φύ- λατ- τε, εἰς πολ-
+λὰ ἔ- τη,
+Δέσ- πο- τα, εἰς πολ-
+λὰ ἔ- τη,
+Δέσ- πο- τα, εἰς πολ-
+λὰ ἔ- τη,
+Δέσ- πο- τα
+}
+\end{lilypond}}
+
+\begin{document}
+%\selectlanguage{english}
+\begin{center}
+{\Large The Trisagion When Metropolitan Nicholas is Present} \\
+{\small Prepared by Holy Trinity Greek Orthodox Parish Choir, Fort Wayne, Indiana \\
+June 2018}
+\end{center}
+
+\textsc{The Metropolitan will read the appropriate prayer at the Trisagion}
+
+\textsc{Metropolitan, Priest and Deacon say the Trisagion Hymn alternating}
+\vspace{-1em}
+\begin{quote}
+\begin{itshape}
+(The Trisagion Hymn is from ``The Green Book'' (1977).)
+\end{itshape}
+\end{quote}
+\vspace{-0.5em}
+\textbf{Metropolitan:}
+
+\ThriceHoly
+
+\textbf{Priest:}
+
+\ThriceHoly
+
+\textbf{Deacon:}
+
+\ThriceHoly
+
+\clearpage
+\textsc{Choir ``Glory ... Holy Immortal, have mercy on us''}
+%\vspace{-1em}
+
+\GloryHolyImmortal
+
+\textsc{Deacon out to Solea by Icon of Christ}
+
+\textsc{Metropolitan with Dikeron and Trikeron turns to the people as the}
+
+\textsc{Choir sings ``Holy God''}
+
+\HolyGod
+
+\textsc{Metropolitan chants ``Lord, look down from heaven''}
+
+\MetropolitanchantsLordlookdownfromheaven
+
+\textsc{Choir sings a straight ``Eis polla eti Despota''}
+
+\PollaEti
+
+\textsc{Choir sings ``Holy Mighty''}
+
+\HolyMighty
+
+\textsc{Metropolitan chants ``Lord, look down from heaven''}
+
+\MetropolitanchantsLordlookdownfromheaven
+
+\textsc{Choir sings a straight ``Eis polla eti Despota''}
+
+\PollaEti
+
+\textsc{Choir sings ``Holy Immortal''}
+
+\HolyImmortal
+
+\textsc{Metropolitan chants ``Lord, look down from heaven''}
+
+\MetropolitanchantsLordlookdownfromheaven
+
+\textsc{Choir sings a straight ``Eis polla eti Despota''}
+
+\PollaEti
+
+\textsc{Choir sings ``Have mercy on us''}
+
+\Havemercy
+
+\clearpage
+\textsc{Deacon exclaims ``Dynamis!''}
+
+\textsc{Choir sings ``Ne Dynamis. Holy God, ...''}
+%% \vspace{-1em}
+%% \begin{quote}
+%% \begin{itshape}
+%% \small\color{red} ????  Not sure how this should end.  Do we stop before the ``have mercy on us''?
+
+%% (I have included the ``have mercy on us'' ending (as normal) in the music below, but need to know if this is OK or not.)
+%% \end{itshape}
+%% \end{quote}
+\NeDynamis
+
+\ThriceHolyGreek
+
+\textsc{Metropolitan to Prothesis and Throne at back of Altar}
+
+\textsc{Deacon intones ``Lord save the faithful'' \#1}
+
+\textsc{Metropolitan chants ``Lord save the faithful''}
+
+\textsc{Deacon intones ``Lord save the faithful'' \#2}
+
+\textsc{Choir sings ``Lord save the faithful''}
+
+\vspace{-1em}
+\begin{quote}
+\begin{itshape}
+\small\color{red}CAUTION: We don't know yet the tone or melody in
+which the Metropolitan will chant ``Lord save the faithful''.  The
+following is simply one version.
+\end{itshape}
+\end{quote}
+
+Third Tone\hfill\emph{(After the Takis version)}
+
+\Lordsavethefaithful
+
+\clearpage
+\textsc{Deacon intones ``And hear us''}
+
+\textsc{Metropolitan chants ``And hear us''}
+
+\textsc{Deacon intones Patriarch's Pheme}
+
+\textsc{Metropolitan chants Patriarch's Pheme}
+
+\textsc{Priest chants Metropolitan's Pheme the first time}
+
+\textsc{Metropolitan faces people and blesses them}
+
+\textsc{Choir sings Metropolitan's Pheme the second time}
+\vspace{-1em}
+\begin{quote}
+\begin{itshape}
+(See also next page.)
+\end{itshape}
+\end{quote}
+\vspace{-0.5em}
+Second Tone\hfill N. Takis\\[1em]
+\fimi
+
+\includepdf[pages=-,scale=1,pagecommand={}]{../fimi_nicholas.pdf} 
+
+\clearpage
+\begin{center}
+{\Large\selectlanguage{greek}Τὸν Δεσπότην\selectlanguage{english} ---
+replaces \selectlanguage{greek}Τὸν Εὐλογοῦντα}\selectlanguage{english} \\
+{\small Prepared by Holy Trinity Greek Orthodox Parish Choir, Fort Wayne, Indiana \\
+June 2018}
+\end{center}
+
+Second Tone\hfill\emph{(After the version from the Lawrence Hymnal)}
+
+\TonDespotin
+
+\end{document}
