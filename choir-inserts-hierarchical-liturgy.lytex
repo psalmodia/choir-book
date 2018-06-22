@@ -1,4 +1,4 @@
-\documentclass[12pt,letter]{article}
+\documentclass[12pt,letterpaper]{article}
 \usepackage{palatino}
 \usepackage{color}
 \usepackage{pdfpages}
@@ -6,14 +6,157 @@
 \usepackage[utf8]{inputenc}
 \usepackage[greek, english]{babel}
 \usepackage[LGR,T1]{fontenc}
- 
+
 \textwidth=6.5truein
-\textheight=9truein
+\textheight=9.5truein
 \topmargin=-0.8truein
 \oddsidemargin=0truein
 \evensidemargin=0truein
 \parindent=0em
 \parskip=1em
+
+\newcommand{\AnastasimoThird}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key g \major
+  \partial 2 g4 g
+  a4 g fis g
+  d'4 c b4. b8
+  b4 b b a
+  g fis8( g) a4( b8 a)
+  g4( fis) e2
+
+  b'2 a4 a
+  a4( g) fis g
+  a4( b) b2
+  b4 c e d
+  c4 b a b
+  c4 c b2
+
+  r4 b d c
+  b2 b4 b
+  b4( a) g fis
+  a4( b8 a) g4( fis)
+  e2. a4
+  c2 b4 a
+  e4 fis a g
+  fis4 e d2
+
+  g4 g g g
+  g2 d4 d
+  d'4 c b a
+  b2 b4 c
+  d4( e) d8( c) b4
+  c8( b c d) b4. g8
+  a4 a b( a)
+  g4( fis) g2
+}
+\addlyrics{%
+  Ευ- φραι-
+  νέ- σθω τα ου-
+  ρά- νι- α, α-
+  γαλ- λι- ά- σθω
+  τα ε- πί-
+  γει- α,
+
+  ό- τι ε-
+  ποί- η- σε
+  κρά- τος
+  εν βρα- χί- ο-
+  νι αυ- τού, ο
+  Κύ- ρι- ος∙
+  ε- πά- τη-
+  σε τω θα-
+  νά- τω τον
+  θά- να-
+  τον∙ πρω-
+  τό- το- κος
+  των νε- κρών ε-
+  γέ- νε- το∙
+
+  εκ κοι- λί- ας
+  ά- δου ερ-
+  ρύ- σα- τω η-
+  μάς, και πα-
+  ρέ- σχε τω
+  κό- σμω το
+  μέ- γα έ-
+  λε- ος.
+}
+\end{lilypond}}
+
+\newcommand{\AnastasimoThirdEnglish}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key g \major
+  \partial 2 g4 g
+  a4 g fis g
+  d'4 c b4. b8
+  b4 b b a
+  g fis8( g) a4( b8 a)
+  g4( fis) e2
+
+  b'2 a4 a
+  a4 g fis( g)
+  a4 b b2
+  b4 c e d
+  c4 b a( b)
+  c4 c b2
+
+  r4 b d c
+  b2 b4 b
+  b4 a g( fis)
+  a4( b8 a) g4( fis)
+  e2. a4
+  c2 b4( a)
+  e4 fis a g
+  fis4 e d2
+
+  g4 g g g
+  g2 d4 d
+  d'4 c b a
+  b2 b4 c
+  d4 e d8( c) b4
+  c8( b c d) b4. g8
+  a4 a b a
+  g4( fis) g2
+}
+\addlyrics{%
+  Let all
+  things a- bove in
+  heav'n re- joice and
+  let all things be-
+  low on earth
+  be glad
+
+  With all the
+  might and strength
+  of His arm
+  an e- ter- nal
+  deed the Lord
+  did per- form
+
+  Be- neath His
+  feet He has
+  tram- pled down
+  death by
+  death, and
+  first born
+  of the dead has
+  He be- come
+
+  From the depths of
+  Ha- des has
+  He de- li- vered
+  us, and to
+  all the world has
+  gran- ted His
+  great re- deem- ing
+  mer- cy
+}
+\end{lilypond}}
 
 \newcommand{\HolyGod}{\begin[staffsize=25]{lilypond}
 \relative c'' {
@@ -37,7 +180,8 @@
 \relative c'' {
   \textLengthOn
   \override Staff.TimeSignature #'stencil = ##f
-  g e f( g) b( a g f)
+  %g e f( g) b( a g f) % from The Green Book
+  g( e) f g b( a g f) % from choir long-time practice
   \time 2/4
   e2
 }
@@ -51,23 +195,23 @@
   \time 1/4
   g4
   \time 4/4
-  %b2( a2) g2 f8( e8 f4) g8( a8 g2.)
-  b2( a) g f g1
+  %b2( a2) g2 f8( e8 f4) g8( a8 g2.) % fancy ending (from both The Red Book and the New Hymnal)
+  %b2( a) g f g1 % simple ending (The Green Book)
+  b2( a) g fis g1 % simple ending (choir practice)
 }
 \addlyrics{%
 Have mer- cy on us}
 \end{lilypond}}
 
-\newcommand{\PollaEti}{\begin[staffsize=25]{lilypond}
+\newcommand{\EisPollaEti}{\begin[staffsize=25]{lilypond}
 \relative c'' {
   \textLengthOn
   \override Staff.TimeSignature #'stencil = ##f
-  \time 4/4
-  g g g g
+  \partial 2 g4 g
   \time 3/4
-  g a2
-  \time 4/4
-  a2 g2
+  g g g
+  \time 6/4
+  a2 a g
 }
 \addlyrics{Eis pol- la e- ti Des po ta}
 \end{lilypond}}
@@ -80,8 +224,9 @@ Have mer- cy on us}
   g( a) c( b) a8( b8 a8 g8) g2
 }
 \addlyrics{%
-%Ne Dy- na- mis
-Νέ Δύ- να- μις}
+  Ne Dy- na- mis % Engrish :)
+  %Νέ Δύ- να- μις
+}
 \end{lilypond}}
 
 \newcommand{\ThriceHoly}{\begin[staffsize=25]{lilypond}
@@ -91,9 +236,10 @@ Have mer- cy on us}
   \override Score.BarNumber.break-visibility = ##(#f #f #f)
   b( a g f g2) e f( g)
   b4( a g f g2) e f g
-  g4 e f( g) b( a g f) e2. g4
-  %b2( a2) g2 f8( e8 f4) g8( a8 g1)
-  b2( a) g f g1
+  g4( e) f g b( a g f) e2. g4
+  %b2( a2) g2 f8( e8 f4) g8( a8 g1) % fancy ending (from both The Red Book and the New Hymnal)
+  %b2( a) g f g1 % simple ending (The Green Book)
+  b2( a) g fis g1 % simple ending (choir practice)
 }
 \addlyrics{%
 Ho- ly God
@@ -110,8 +256,9 @@ have mer- cy on us}
   b( a) g( f) g2 e f g
   b4( a) g( f) g2 e f g
   g4 e f g b( a) g( f) e2. g4
-  %b2 a2 g2 f8( e8 f4) g8( a8 g1)
-  b2 a g f g1
+  %b2 a2 g2 f8( e8 f4) g8( a8 g1) % fancy ending (from both The Red Book and the New Hymnal)
+  %b2 a g f g1 % simple ending (The Green Book)
+  b2 a g fis g1 % simple ending (choir practice)
 }
 \addlyrics{%
 Ἅ- γι- ος ὁ Θε- ός
@@ -127,22 +274,28 @@ have mer- cy on us}
   \override Staff.TimeSignature #'stencil = ##f
   \override Score.BarNumber.break-visibility = ##(#f #f #f)
   \cadenzaOn
-  g8 g g g g g g g g g2 \bar "|"
+  g8 g g g g g g g g g2 \bar "|" % the g2 on "Son" the choir picked up from The Red Book
   g8 g g g g a2 g2 \bar "|"
-  g8 g g g g g g g g g g a2 a2 a2 g2 \bar "|"
+  g8 g g g g g g g g g a2 a2 a2 g2 \bar "|"
   \cadenzaOff
-  g4 e f( g) b( a g f) e2. g4
-  %b2( a2) g2 f8( e8 f4) g8( a8 g1)
-  b2( a) g f g1
+
+  %g4 e f( g) b( a g f) e2. g4 % "Holy Immortal" from The Green Book
+  g4( e) f g b( a g f) e2. g4 % "Holy Immortal", choir long-time practice
+  %b2( a2) g2 f8( e8 f4) g8( a8 g1) % fancy ending (from both The Red Book and the New Hymnal)
+  %b2( a) g f g1 % simple ending (The Green Book)
+  b2( a) g fis g1 % simple ending (choir practice)
 }
 \addlyrics{%
   Glo- ry to the Fa- ther and to the Son and to the Ho- ly Spi- rit
-  Both now and ev- er and to the a- ges of a- ges A- men
+  Now and ev- er % the choir says "Now" (not "Both now"), from The Green Book
+  and to the a- ges of a- ges % the choir says this, not "forever more", as in The Green Book
+  A- men
+
   Ho- ly Im- mor- tal
- have mer- cy on us}
+  have mer- cy on us}
 \end{lilypond}}
 
-\newcommand{\fimi}{\begin[staffsize=25]{lilypond}
+\newcommand{\Pheme}{\begin[staffsize=25]{lilypond}
 \relative c'' {
   \textLengthOn
   \override Staff.TimeSignature #'stencil = ##f
@@ -156,7 +309,13 @@ have mer- cy on us}
   \time 4/4
   e8( f g a) g2
   g4 e f g
-  a4 a g fis
+  a4 a g
+    % Original note is F#.
+    fis
+    % Rick's recommendation: use G here, not F#.
+    %\tweak NoteHead.color #red
+    %\tweak Stem.color #red
+    %g
   b4 a g f
   e2. e4
   b'2 a4 b
@@ -221,6 +380,78 @@ ful, the
 faith- ful.}
 \end{lilypond}}
 
+\newcommand{\EisMnemosynon}{\begin[staffsize=25]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  \partial 2 c c
+  e( d) c( b)
+  c2 e4( f)
+  g( a) f( g)
+  g1
+  c2( b4 a)
+  g1
+  a4( f) e( f)
+  e2 d
+  c1
+}
+\addlyrics{%
+  Εἰς μνη-
+  μό- συ-
+  νον αἰ-
+  ώ- νι-
+  ον
+  ἔ-
+  σται,
+  ἔ- σται
+  δί- και-
+  ος
+}
+\end{lilypond}}
+
+\newcommand{\EisMnemosynonEnglish}{\begin[staffsize=25]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  \partial 4 c4
+  e( d c b)
+  c2 e4 f
+  g( a f g)
+  g2 g4 g
+  c2( b4 a g2.) g4
+  a4( f e) f
+  e2( d)
+  c1
+}
+\addlyrics{%
+  The
+  mem-
+  ry of the
+  right-
+  eous will en- dure, en-
+  dure for-
+  ev-
+  er
+}
+\end{lilypond}}
+
+\newcommand{\EisMnemosynonAlleluia}{\begin[staffsize=25]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  \partial 2 c4 c
+  d4( e f8 g f e)
+  e4.( d8 c d c4)
+  c1
+}
+\addlyrics{%
+  Al- le- lu- i- a
+}
+\end{lilypond}}
+
 \newcommand{\TonDespotin}{\begin[staffsize=25]{lilypond}
 \relative c'' {
   \textLengthOn
@@ -232,7 +463,7 @@ faith- ful.}
   \time 4/4
   g4 g g g
   \time 6/4
-  b4( a) g f e2
+  b4( a) g f g2
   \time 4/4
   g2 g8( f8) e4
   \time 6/4
@@ -269,7 +500,30 @@ faith- ful.}
 \begin{document}
 %\selectlanguage{english}
 \begin{center}
-{\Large The Trisagion When Metropolitan Nicholas is Present} \\
+{\Large Resurrectional Apolytikion: \selectlanguage{greek}Ευφραινέσθω
+  Τὰ Οὐράνια\selectlanguage{english}} \\
+{\small Prepared by Holy Trinity Greek Orthodox Parish Choir, Fort
+  Wayne, Indiana \\ June 2018}
+\end{center}
+
+\selectlanguage{greek}Ἦχος Γ'\selectlanguage{english}\hfill The Green Book (2nd ed., 1982)
+
+\AnastasimoThird
+
+\clearpage
+\begin{center}
+{\Large Resurrectional Apolytikion: Let All Things Rejoice} \\
+{\small Prepared by Holy Trinity Greek Orthodox Parish Choir, Fort Wayne, Indiana \\
+June 2018}
+\end{center}
+
+Third Tone\hfill The Green Book (2nd ed., 1982)
+
+\AnastasimoThirdEnglish
+
+\clearpage
+\begin{center}
+{\Large The Hierarchical Trisagion} \\
 {\small Prepared by Holy Trinity Greek Orthodox Parish Choir, Fort Wayne, Indiana \\
 June 2018}
 \end{center}
@@ -280,19 +534,21 @@ June 2018}
 \vspace{-1em}
 \begin{quote}
 \begin{itshape}
-(The Trisagion Hymn is from ``The Green Book'' (1977).)
+(The Trisagion Hymn is based on long-time choir usage, after both
+  Anastassiou's ``The Red Book'' (5th ed., 1987) and ``The Green
+  Book'' (2nd ed., 1982).)
 \end{itshape}
 \end{quote}
 \vspace{-0.5em}
-\textbf{Metropolitan:}
+\textbf{\large Metropolitan:}
 
 \ThriceHoly
 
-\textbf{Priest:}
+\textbf{\large Priest:}
 
 \ThriceHoly
 
-\textbf{Deacon:}
+\textbf{\large Deacon:}
 
 \ThriceHoly
 
@@ -308,6 +564,8 @@ June 2018}
 
 \textsc{Choir sings ``Holy God''}
 
+\emph{Sung \textbf{\textsc{\underline{very, very slowly}}} to give the
+  Metropolitan time to bless the people.}\\[0.5em]
 \HolyGod
 
 \textsc{Metropolitan chants ``Lord, look down from heaven''}
@@ -316,7 +574,7 @@ June 2018}
 
 \textsc{Choir sings a straight ``Eis polla eti Despota''}
 
-\PollaEti
+\EisPollaEti
 
 \textsc{Choir sings ``Holy Mighty''}
 
@@ -328,7 +586,7 @@ June 2018}
 
 \textsc{Choir sings a straight ``Eis polla eti Despota''}
 
-\PollaEti
+\EisPollaEti
 
 \textsc{Choir sings ``Holy Immortal''}
 
@@ -340,7 +598,7 @@ June 2018}
 
 \textsc{Choir sings a straight ``Eis polla eti Despota''}
 
-\PollaEti
+\EisPollaEti
 
 \textsc{Choir sings ``Have mercy on us''}
 
@@ -360,7 +618,7 @@ June 2018}
 %% \end{quote}
 \NeDynamis
 
-\ThriceHolyGreek
+\ThriceHoly
 
 \textsc{Metropolitan to Prothesis and Throne at back of Altar}
 
@@ -377,9 +635,11 @@ June 2018}
 \begin{itshape}
 \small\color{red}CAUTION: We don't know yet the tone or melody in
 which the Metropolitan will chant ``Lord save the faithful''.  The
-following is simply one version.
+following is simply one version.  However, if the Metropolitan chants
+it differently, we will copy his version.
 \end{itshape}
 \end{quote}
+\vspace{-0.5em}
 
 Third Tone\hfill\emph{(After the Takis version)}
 
@@ -407,9 +667,35 @@ Third Tone\hfill\emph{(After the Takis version)}
 \end{quote}
 \vspace{-0.5em}
 Second Tone\hfill N. Takis\\[1em]
-\fimi
+\Pheme
 
-\includepdf[pages=-,scale=1,pagecommand={}]{../fimi_nicholas.pdf} 
+%% \emph{(N.B.---The note that is colored in {\color{red} red} was
+%%   changed by Rick.)}
+
+\includepdf[pages=-,scale=1,pagecommand={}]{../fimi_nicholas.pdf}
+
+\clearpage
+\begin{center}
+{\Large Communion Hymn: \selectlanguage{greek}Εἰς Μνημόσυνον\selectlanguage{english}} \\
+{\small Prepared by Holy Trinity Greek Orthodox Parish Choir, Fort Wayne, Indiana \\
+June 2018}
+\end{center}
+
+Plagal Fourth Tone\hfill Lawrence Hymnal (1997)
+
+\textbf{\large Greek}
+
+\EisMnemosynon
+
+\vspace{1em}
+\textbf{\large English}
+
+\EisMnemosynonEnglish
+
+\vspace{1em}
+\textbf{\large Conclusion}
+
+\EisMnemosynonAlleluia
 
 \clearpage
 \begin{center}
