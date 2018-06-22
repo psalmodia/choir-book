@@ -452,7 +452,7 @@ faith- ful.}
 }
 \end{lilypond}}
 
-\newcommand{\TonDespotin}{\begin[staffsize=25]{lilypond}
+\newcommand{\TonDespotinAfterLawrence}{\begin[staffsize=25]{lilypond}
 \relative c'' {
   \textLengthOn
   \override Staff.TimeSignature #'stencil = ##f
@@ -494,6 +494,46 @@ faith- ful.}
 Δέσ- πο- τα, εἰς πολ-
 λὰ ἔ- τη,
 Δέσ- πο- τα
+}
+\end{lilypond}}
+
+\newcommand{\TonDespotinAfterGreenBook}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  \partial 2 g4 g
+  e4( f g a)
+  g2 g4 g
+  fis4 g a2
+  g4 fis g2
+  a2 g8( f8) e4
+  f4 g g2
+  fis4 g a2
+  g8( f8) e4 f g
+  g2 fis4 g
+  a2 g8( f8) e4
+  b'4 a g2
+  g4 a b2 % no birdseye (as in The Green Book) in this rendering
+  a4 g g2
+  \time 11/4
+  e4 f2.( g4 a2 g1)
+}
+\addlyrics{%
+Τὸν Δεσ-
+πό-
+την καὶ Ἀρ-
+χι- ε- ρέ-
+α ἡ- μῶν,
+Κύ- ρι- ε
+φύ- λατ- τε,
+εἰς πολ- λὰ
+ἔ- τη, Δέσ- πο-
+τα, εἰς πολ-
+λὰ ἔ- τη,
+Δέσ- πο- τα,
+εἰς πολ- λὰ
+ἔ- τη, Δέσ- πο- τα
 }
 \end{lilypond}}
 
@@ -705,8 +745,11 @@ replaces \selectlanguage{greek}Τὸν Εὐλογοῦντα}\selectlanguage{en
 June 2018}
 \end{center}
 
-Second Tone\hfill\emph{(After the version from the Lawrence Hymnal)}
+Second Tone\hfill\emph{(After the version from
+  %the Lawrence Hymnal)
+  The Green Book)
+  }
 
-\TonDespotin
+\TonDespotinAfterGreenBook
 
 \end{document}
