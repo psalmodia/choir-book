@@ -1,4 +1,4 @@
-SRC = great-litany.lytex choir-inserts-hierarchical-liturgy.lytex
+SRC = great-litany.lytex choir-inserts-hierarchical-liturgy.lytex psalm-135.lytex
 TGT = $(SRC:.lytex=.pdf)
 
 all: $(TGT)

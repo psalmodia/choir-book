@@ -1,0 +1,160 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{palatino}
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek, english]{babel}
+\usepackage[LGR,T1]{fontenc}
+
+\textwidth=6.5truein
+\textheight=9.5truein
+\topmargin=-0.8truein
+\oddsidemargin=0truein
+\evensidemargin=0truein
+\parindent=0em
+\parskip=1em
+
+
+\newcommand{\VerseOne}{\begin[staffsize=25]{lilypond}
+\layout {
+  \context {
+    \Score
+    \omit BarNumber
+    % or:
+    %\remove "Bar_number_engraver"
+  }
+}
+\relative c' {
+  \textLengthOn
+  %\override Staff.TimeSignature #'stencil = ##f
+  \key e \minor
+  \time 3/4
+  e8( fis e4) d4
+  e2 fis4
+  g8( a g4) fis
+  g2 a4
+  b2 a4
+  c2 c4
+  b2 a4
+  g4( fis e)
+  fis2 a4
+  g2 fis4
+  e2.
+}
+\addlyrics{%
+  Έξ- ο-
+  μο- λο-
+  γεῖ- σθε
+  τῷ Κυ-
+  ρί- ῳ,
+  ὅ- τι
+  ἀγ- α-
+  θός,
+  Ἁλ- λη-
+  λού- ϊ-
+  α
+}
+\end{lilypond}}
+
+
+\newcommand{\VerseTwo}{\begin[staffsize=25]{lilypond}
+\layout {
+  \context {
+    \Score
+    \omit BarNumber
+    % or:
+    %\remove "Bar_number_engraver"
+  }
+}
+\relative c' {
+  \textLengthOn
+  %\override Staff.TimeSignature #'stencil = ##f
+  \key e \minor
+  \time 3/4
+  e8( fis e4) d4
+  e2 fis4
+  g8( a g4) fis
+
+  g4( a) b
+  c4 b a
+  g4( fis e)
+  fis2 a4
+  g2 fis4
+  e2.
+}
+\addlyrics{%
+  Έξ- ο-
+  μο- λο-
+  γεῖ- σθε
+  τῷ Θε-
+  ῷ τῶν θε-
+  ῶν,
+  Ἁλ- λη-
+  λού- ϊ-
+  α
+}
+\end{lilypond}}
+
+
+\newcommand{\VerseEnd}{\begin[staffsize=25]{lilypond}
+\layout {
+  \context {
+    \Score
+    \omit BarNumber
+    % or:
+    %\remove "Bar_number_engraver"
+  }
+}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \key e \minor
+  \time 3/4
+  g4( a b)
+  a2 g4
+  a4( b) c
+  b4( a g)
+  a2 b8( a)
+  g4( fis) e
+  d2 d4
+  fis4 e4 a
+  g2 fis4
+  e2.
+}
+\addlyrics{%
+  ὅ-
+  τι εἰς
+  τὸν αἰ-
+  ῶ-
+  να τὸ
+  ἔ- λε-
+  ος αὐ-
+  τοῦ, Ἁλ- λη-
+  λού- ϊ-
+  α
+}
+\end{lilypond}}
+
+
+\begin{document}
+%\selectlanguage{english}
+\begin{center}
+{\Large Psalm 135: \selectlanguage{greek}Έξομολογεῖσθε τῷ Κυρίῳ\selectlanguage{english}} \\
+{\small Prepared by Holy Trinity Greek Orthodox Parish Choir, Fort
+  Wayne, Indiana \\ June 2018}
+\end{center}
+
+Tone Plagal First (\selectlanguage{greek}Κε\selectlanguage{english} = E)\hfill {\footnotesize Transcribed from \texttt{\href{https://youtu.be/9XEI6EBbSjg}{youtu.be/9XEI6EBbSjg}}}
+
+\VerseOne
+
+\VerseEnd
+
+\vspace{2em}
+\VerseTwo
+
+\VerseEnd
+
+\end{document}
