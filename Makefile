@@ -1,5 +1,7 @@
-SRC = great-litany.lytex choir-inserts-hierarchical-liturgy.lytex psalm-135.lytex
+SRC = *.lytex
 TGT = $(SRC:.lytex=.pdf)
+
+LATEX = latexmk -pdf
 
 all: $(TGT)
 
@@ -11,4 +13,4 @@ $(LYTEX:.lytex=.pdf): $(LYTEX)
 .lytex.pdf:
 	lilypond-book --out=$(.PREFIX) --pdf $(.IMPSRC) && \
 	  mkdir -p $(.PREFIX) && cd $(.PREFIX) && \
-	  pdflatex $(.PREFIX) && cp $(.TARGET) ..
+	  $(LATEX) $(.PREFIX) && cp $(.TARGET) ..
