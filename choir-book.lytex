@@ -19,6 +19,18 @@
 \author{Holy Trinity Greek Orthodox Parish Choir, Fort Wayne, Indiana}
 \date{4 August 2018}
 
+\newenvironment{greekenglish}[1]
+{\begin{multicols}{2}[]
+\selectlanguage{greek}
+#1
+\vfill\null
+\columnbreak
+\selectlanguage{english}
+}
+{
+\end{multicols}
+}
+
 \newcommand{\amenone}{\begin[staffsize=25]{lilypond}
 \relative c'' {
   \textLengthOn
@@ -111,292 +123,213 @@ America and approved by the Ecumenical Patriarchate.
 \newpage
 \pagenumbering{arabic}
 
-\begin{multicols}{2}[]
-
-\selectlanguage{greek}
+\begin{greekenglish}{
 \begin{center}
 {\Large ΛΕΙΤΟΥΡΓΙΑ} \\
 \end{center}
-
-\begin{center}
-\textsc{Μεγαλη Συναπτη ἢ Ειρηνικα}
-\end{center}
-\vspace{-1em}
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 \begin{center}
 {\Large LITURGY} \\
 \end{center}
+\end{greekenglish}
 
+\begin{greekenglish}{
+\begin{center}
+\textsc{Μεγαλη Συναπτη ἢ Ειρηνικα}
+\end{center}
+}
 \begin{center}
 \textsc{The Litany Of Peace or Great Litany}
 \end{center}
-\vspace{-1em}
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-
-\selectlanguage{greek}
+\begin{greekenglish}{
 ΙΕΡΕΥΣ \\
 Εὐλογημένη ἡ Βασιλεία τοῦ Πατρὸς καὶ τοῦ Υἱοῦ καὶ τοῦ Ἁγίου Πνεύματος,
-νῦν καὶ ἀεί, καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων.\selectlanguage{english}
+νῦν καὶ ἀεί, καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων.
 
 \amenoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 PRIEST \\
 Blessed is the Kingdom of the Father and of the Son and of the Holy
 Spirit, now and forever and to the ages of ages.
 
 \amenone
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}ΔΙΑΚΟΝΟΣ \\
-Ἐν εἰρήνῃ τοῦ Κυρίου δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+ΔΙΑΚΟΝΟΣ \\
+Ἐν εἰρήνῃ τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 DEACON \\
 In peace, let us pray to the Lord.
 
 \lhmone
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}Ὑπὲρ τῆς ἄνωθεν εἰρήνης καὶ τῆς σωτηρίας τῶν
-ψυχῶν ἡμῶν, τοῦ Κυρίου δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ τῆς ἄνωθεν εἰρήνης καὶ τῆς σωτηρίας τῶν ψυχῶν ἡμῶν, τοῦ Κυρίου
+δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For the peace from above and for the salvation of our souls, let us
 pray to the Lord.
 
 \lhmone
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ τῆς εἰρήνης τοῦ σύμπαντος κόσμου,
-εὐσταθείας τῶν ἁγίων τοῦ Θεοῦ Ἐκκλησιῶν καὶ τῆς τῶν πάντων ἑνώσεως,
-τοῦ Κυρίου δεηθῶμεν.\selectlanguage{english}
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
-
+\begin{greekenglish}{
+Ὑπὲρ τῆς εἰρήνης τοῦ σύμπαντος κόσμου, εὐσταθείας τῶν ἁγίων τοῦ Θεοῦ
+Ἐκκλησιῶν καὶ τῆς τῶν πάντων ἑνώσεως, τοῦ Κυρίου δεηθῶμεν.
+}
 For the peace of the whole world, for the stability of the holy
 churches of God, and for the unity of all, let us pray to the Lord.
-
-\end{multicols}
+\end{greekenglish}
 \vspace{-2em}
 \begin{multicols}{2}[]
 \lhmoneGR
 \lhmone
 \end{multicols}
 
-\clearpage
 
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ τοῦ ἁγίου οἴκου τούτου, καὶ τῶν μετὰ
-πίστεως, εὐλαβείας καὶ φόβου Θεοῦ εἰσιόντων ἐν αὐτῷ, τοῦ Κυρίου
-δεηθῶμεν.\selectlanguage{english}
+%\clearpage
+
+
+\begin{greekenglish}{
+Ὑπὲρ τοῦ ἁγίου οἴκου τούτου, καὶ τῶν μετὰ πίστεως, εὐλαβείας καὶ φόβου
+Θεοῦ εἰσιόντων ἐν αὐτῷ, τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For this holy house and for those who enter it with faith, reverence,
 and the fear of God, let us pray to the Lord.
 
 \lhmone
-\end{multicols}
+\end{greekenglish}
 
-
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ τῶν εὐσεβῶν καὶ Ὀρθοδόξων Χριστιανῶν, τοῦ
-Κυρίου δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ τῶν εὐσεβῶν καὶ Ὀρθοδόξων Χριστιανῶν, τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For pious and Orthodox Christians, let us pray to the Lord.
 
 \lhmone
+\end{greekenglish}
 
-\end{multicols}
-
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ τοῦ (ἀρχιερατικοῦ βαθμοῦ) ἡμῶν (τοῦ
-δεῖνος), τοῦ τιμίου πρεσβυτερίου, τῆς ἐν Χριστῷ διακονίας, παντὸς τοῦ
-κλήρου καὶ τοῦ λαοῦ, τοῦ Κυρίου δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ τοῦ (ἀρχιερατικοῦ βαθμοῦ) ἡμῶν (τοῦ δεῖνος), τοῦ τιμίου
+πρεσβυτερίου, τῆς ἐν Χριστῷ διακονίας, παντὸς τοῦ κλήρου καὶ τοῦ λαοῦ,
+τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For (episcopal rank) (name), for the honorable presbyterate, for the
 diaconate in Christ, and for all the clergy and the people, let us
 pray to the Lord.
 
 \lhmone
+\end{greekenglish}
 
-\end{multicols}
-
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ τοῦ εὐσεβοῦς ἡμῶν ἔθνους, πάσης ἀρχῆς καὶ
-ἐξουσίας ἐν αὐτῷ, τοῦ Κυρίου δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ τοῦ εὐσεβοῦς ἡμῶν ἔθνους, πάσης ἀρχῆς καὶ ἐξουσίας ἐν αὐτῷ, τοῦ
+Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For our country, for the president, and for all in public service, let
 us pray to the Lord.
 
 \lhmone
-
-\end{multicols}
+\end{greekenglish}
 
 
 \clearpage
 
 
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ τῆς πόλεως ταύτης, πάσης πόλεως, χώρας καὶ
-τῶν πίστει οἰκούντων ἐν αὐταῖς, τοῦ Κυρίου
-δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ τῆς πόλεως ταύτης, πάσης πόλεως, χώρας καὶ τῶν πίστει οἰκούντων
+ἐν αὐταῖς, τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For this city, and for every city and land, and for the faithful who
 live in them, let us pray to the Lord.
 
 \lhmone
+\end{greekenglish}
 
-\end{multicols}
-
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ εὐκρασίας ἀέρων, εὐφορίας τῶν καρπῶν τῆς
-γῆς, καὶ καιρῶν εἰρηνικῶν, τοῦ Κυρίου
-δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ εὐκρασίας ἀέρων, εὐφορίας τῶν καρπῶν τῆς γῆς, καὶ καιρῶν
+εἰρηνικῶν, τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For favorable weather, for an abundance of the fruits of the earth,
 and for peaceful times, let us pray to the Lord.
 
 \lhmone
+\end{greekenglish}
 
-\end{multicols}
-
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ πλεόντων, ὁδοιπορούντων, νοσούντων,
-καμνόντων, αἰχμαλώτων καὶ τῆς σωτηρίας αὐτῶν, τοῦ Κυρίου
-δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ πλεόντων, ὁδοιπορούντων, νοσούντων, καμνόντων, αἰχμαλώτων καὶ τῆς
+σωτηρίας αὐτῶν, τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For those who travel by land, sea, and air, for the sick, the
 suffering, the captives and for their salvation, let us pray to the
 Lord.
 
 \lhmone
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ὑπὲρ τοῦ ῥυσθῆναι ἡμᾶς ἀπὸ πάσης θλίψεως,
-ὀργῆς, κινδύνου καὶ ἀνάγκης, τοῦ Κυρίου
-δεηθῶμεν.\selectlanguage{english}
+\begin{greekenglish}{
+Ὑπὲρ τοῦ ῥυσθῆναι ἡμᾶς ἀπὸ πάσης θλίψεως, ὀργῆς, κινδύνου καὶ ἀνάγκης,
+τοῦ Κυρίου δεηθῶμεν.
 
 \lhmoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 For our deliverance from all affliction, wrath, danger, and necessity,
 let us pray to the Lord.
 
 \lhmone
-\end{multicols}
+\end{greekenglish}
 
 
 \clearpage
 
 
-\begin{multicols}{2}[]
-\selectlanguage{greek} Ἀντιλαβοῦ, σῶσον, ἐλέησον καὶ διαφύλαξον ἡμᾶς ὁ
-Θεὸς τῇ σῇ χάριτι.\selectlanguage{english}
+\begin{greekenglish}{
+Ἀντιλαβοῦ, σῶσον, ἐλέησον καὶ διαφύλαξον ἡμᾶς ὁ Θεὸς τῇ σῇ χάριτι.
 
 \amenoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 Help us, save us, have mercy on us, and protect us, O God, by Your
 grace.
 
 \amenone
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek} Τῆς Παναγίας ἀχράντου, ὑπερευλογημένης, ἐνδόξου
-Δεσποίνης ἡμῶν Θεοτόκου καὶ ἀειπαρθένου Μαρίας μετὰ πάντων τῶν Ἁγίων
-μνημονεύσαντες, ἑαυτοὺς καὶ ἀλλήλους καὶ πᾶσαν τὴν ζωὴν ἡμῶν Χριστῷ τῷ
-Θεῷ παραθώμεθα.\selectlanguage{english}
+\begin{greekenglish}{
+Τῆς Παναγίας ἀχράντου, ὑπερευλογημένης, ἐνδόξου Δεσποίνης ἡμῶν
+Θεοτόκου καὶ ἀειπαρθένου Μαρίας μετὰ πάντων τῶν Ἁγίων μνημονεύσαντες,
+ἑαυτοὺς καὶ ἀλλήλους καὶ πᾶσαν τὴν ζωὴν ἡμῶν Χριστῷ τῷ Θεῷ παραθώμεθα.
 
 \tyoloneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 Commemorating our most holy, pure, blessed, and glorious Lady, the
 Theotokos and ever-virgin Mary, with all the saints, let us commend
 ourselves and one another and our whole life to Christ our God.
 
 \tyolone
-\end{multicols}
+\end{greekenglish}
 
-
-\begin{multicols}{2}[]
-\selectlanguage{greek} ΙΕΡΕΥΣ (χαμηλοφώνως) \\[-2em]
+\begin{greekenglish}{
+ΙΕΡΕΥΣ (χαμηλοφώνως) \\[-2em]
 \begin{quote}
 {\footnotesize ΕΥΧΗ ΑΝΤΙΦΩΝΟΥ Αʹ \\
   Κύριε ὁ Θεὸς ἡμῶν, οὗ τὸ κράτος ἀνείκαστον καὶ ἡ δόξα ἀκατάληπτος,
@@ -406,12 +339,7 @@ ourselves and one another and our whole life to Christ our God.
   ἐλέη σου καί τοὺς οἰκτιρμούς σου.
 }
 \end{quote}
-\vspace{-0.5em}
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 PRIEST (in a low voice)\\[-2em]
 \begin{quote}
   {\footnotesize THE PRAYER OF THE FIRST ANTIPHON \\
@@ -422,25 +350,18 @@ PRIEST (in a low voice)\\[-2em]
     Your abundant mercy and compassion.
   }
 \end{quote}
-\vspace{-0.5em}
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek} ΙΕΡΕΥΣ \\
+\begin{greekenglish}{
+ΙΕΡΕΥΣ \\
 Ὅτι πρέπει σοι πᾶσα δόξα, τιμὴ καὶ προσκύνησις, τῷ Πατρὶ καὶ τῷ Υἱῷ
 καὶ τῷ Ἁγίῳ Πνεύματι, νῦν καὶ ἀεὶ καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων.
-\selectlanguage{english}
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 PRIEST \\
 For to You belong all glory, honor, and worship, to the Father and to
 the Son and to the Holy Spirit, now and forever and to the ages of
 ages.
-
-\end{multicols}
+\end{greekenglish}
 
 \begin{center}
 (See ``Pickup'' Amen on next page.)
@@ -512,83 +433,60 @@ ages.
 
 \vspace{2em}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}
+\begin{greekenglish}{
 \begin{center}
 ΜΙΚΡΑ ΣΥΝΑΠΤΗ
 \end{center}
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 \begin{center}
 THE SMALL LITANY
 \end{center}
-\vspace{-1em}
-\end{multicols}
+\end{greekenglish}
 \vspace{-2em}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}
+\begin{greekenglish}{
 ΔΙΑΚΟΝΟΣ \\
 Ἔτι καὶ ἔτι ἐν εἰρήνῃ τοῦ Κυρίου δεηθῶμεν.
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 DEACON \\
 Again and again, in peace, let us pray to the Lord.
-\end{multicols}
+\end{greekenglish}
 
 \begin{multicols}{2}[]
 \lhmoneGR
-\vfill\null
-\columnbreak
 \lhmone
 \end{multicols}
 
 
 \clearpage
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}
+
+\begin{greekenglish}{
 Ἀντιλαβοῦ, σῶσον, ἐλέησον καὶ διαφύλαξον ἡμᾶς ὁ Θεὸς τῇ σῇ χάριτι.
 
 \amenoneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 Help us, save us, have mercy on us, and protect us, O God, by Your
 grace.
 
 \amenone
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}
+\begin{greekenglish}{
 Τῆς Παναγίας ἀχράντου, ὑπερευλογημένης, ἐνδόξου Δεσποίνης ἡμῶν
 Θεοτόκου καὶ ἀειπαρθένου Μαρίας μετὰ πάντων τῶν Ἁγίων μνημονεύσαντες,
 ἑαυτοὺς καὶ ἀλλήλους καὶ πᾶσαν τὴν ζωὴν ἡμῶν Χριστῷ τῷ Θεῷ παραθώμεθα.
 
 \tyoloneGR
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 Commemorating our most holy, pure, blessed, and glorious Lady, the
 Theotokos and ever-virgin Mary, with all the saints, let us commend
 ourselves and one another and our whole life to Christ our God.
 
 \tyolone
-\end{multicols}
+\end{greekenglish}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}
+\begin{greekenglish}{
 ΙΕΡΕΥΣ (χαμηλοφώνως)\\[-2em]
 \begin{quote}
   {\footnotesize ΕΥΧΗ ΑΝΤΙΦΩΝΟΥ Βʹ \\
@@ -599,11 +497,7 @@ ourselves and one another and our whole life to Christ our God.
     σέ.
   }
 \end{quote}
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 PRIEST (in a low voice)\\[-2em]
 \begin{quote}
   {\footnotesize THE PRAYER OF THE SECOND ANTIPHON \\
@@ -614,27 +508,22 @@ PRIEST (in a low voice)\\[-2em]
 
   }
 \end{quote}
-\end{multicols}
+\end{greekenglish}
 \vspace{-2em}
 
-\begin{multicols}{2}[]
-\selectlanguage{greek}
+\begin{greekenglish}{
 ΙΕΡΕΥΣ \\
 Ὅτι σὸν τὸ κράτος καὶ σοῦ ἐστιν
 ἡ βασιλεία καὶ ἡ δύναμις καὶ ἡ δόξα,
 τοῦ Πατρὸς καὶ τοῦ Υἱοῦ καὶ τοῦ Ἁγίου
 Πνεύματος, νῦν καὶ ἀεὶ εἰς τοὺς αἰῶνας τῶν
 αἰώνων.
-
-\vfill\null
-\columnbreak
-
-\selectlanguage{english}
+}
 PRIEST \\
 For Yours is the dominion, and Yours is the kingdom and the power and
 the glory, of the Father and of the Son and of the Holy Spirit, now
 and forever and to the ages of ages.
-\end{multicols}
+\end{greekenglish}
 
 \begin{center}
 (See ``Pickup'' Amen on next page.)
