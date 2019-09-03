@@ -1,4 +1,4 @@
-\documentclass[12pt,letterpaper]{article}
+\documentclass[12pt,letterpaper,twoside]{article}
 \usepackage{palatino}
 \textwidth=6.5truein
 \textheight=9.5truein
@@ -17,7 +17,17 @@
 
 \title{Choir Book}
 \author{Holy Trinity Greek Orthodox Parish Choir, Fort Wayne, Indiana}
-\date{4 August 2018}
+\date{DRAFT: 2 September 2019}
+
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}% source: https://tex.stackexchange.com/questions/11707/how-to-force-output-to-a-left-or-right-page
+
+\newcommand*\cleartorightpage{%
+  \clearpage
+  \ifodd\value{page}\else\hbox{}\newpage\fi
+}
 
 \newenvironment{greekenglish}[1]
 {\begin{multicols}{2}[]
@@ -61,7 +71,7 @@
   \override Staff.TimeSignature #'stencil = ##f
   g g a2 g1
 }
-\addlyrics{Lord have mer- cy}
+\addlyrics{Lord have mer -- cy}
 \end{lilypond}}
 
 \newcommand{\lhmoneGR}{\begin[staffsize=25]{lilypond}
@@ -76,6 +86,42 @@
   g4 g8 g a4 a g1
 }
 \addlyrics{Κύ- ρι- ε, λέ- η- σον}
+\end{lilypond}}
+
+\newcommand{\lhmtwo}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  g2( a4) b \time 6/4 c( a) g1
+}
+\addlyrics{Lord have mer -- cy}
+\end{lilypond}}
+
+\newcommand{\lhmtwoGR}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  g4 g a b \time 6/4 c a g1
+}
+\addlyrics{Κύ -- ρι -- ε, ἐ -- λέ -- η -- σον}
+\end{lilypond}}
+
+\newcommand{\lhmthree}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  g4( f e) a \time 6/4 g( f) e1
+}
+\addlyrics{Lord have mer -- cy}
+\end{lilypond}}
+
+\newcommand{\lhmthreeGR}{\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  g4 f e a \time 6/4 g f e1
+}
+\addlyrics{Κύ -- ρι -- ε, ἐ -- λέ -- η -- σον}
 \end{lilypond}}
 
 \newcommand{\tyolone}{\begin[staffsize=25]{lilypond}
@@ -103,7 +149,7 @@
 \end{lilypond}}
 
 \begin{document}
-\pagenumbering{gobble}
+%\pagenumbering{gobble}
 
 \maketitle
 
@@ -118,10 +164,10 @@ America. This text was produced by the Greek Orthodox Archdiocese of
 America and approved by the Ecumenical Patriarchate.
 \end{quote}
 
-\newpage
-\mbox{}
-\newpage
-\pagenumbering{arabic}
+%\newpage
+%\mbox{}
+\cleartorightpage
+%\pagenumbering{arabic}
 
 \begin{greekenglish}{
 \begin{center}
@@ -173,12 +219,12 @@ In peace, let us pray to the Lord.
 Ὑπὲρ τῆς ἄνωθεν εἰρήνης καὶ τῆς σωτηρίας τῶν ψυχῶν ἡμῶν, τοῦ Κυρίου
 δεηθῶμεν.
 
-\lhmoneGR
+\lhmtwoGR
 }
 For the peace from above and for the salvation of our souls, let us
 pray to the Lord.
 
-\lhmone
+\lhmtwo
 \end{greekenglish}
 
 \begin{greekenglish}{
@@ -190,8 +236,8 @@ churches of God, and for the unity of all, let us pray to the Lord.
 \end{greekenglish}
 \vspace{-2em}
 \begin{multicols}{2}[]
-\lhmoneGR
-\lhmone
+\lhmthreeGR
+\lhmthree
 \end{multicols}
 
 
@@ -213,11 +259,11 @@ and the fear of God, let us pray to the Lord.
 \begin{greekenglish}{
 Ὑπὲρ τῶν εὐσεβῶν καὶ Ὀρθοδόξων Χριστιανῶν, τοῦ Κυρίου δεηθῶμεν.
 
-\lhmoneGR
+\lhmtwoGR
 }
 For pious and Orthodox Christians, let us pray to the Lord.
 
-\lhmone
+\lhmtwo
 \end{greekenglish}
 
 \begin{greekenglish}{
@@ -225,13 +271,13 @@ For pious and Orthodox Christians, let us pray to the Lord.
 πρεσβυτερίου, τῆς ἐν Χριστῷ διακονίας, παντὸς τοῦ κλήρου καὶ τοῦ λαοῦ,
 τοῦ Κυρίου δεηθῶμεν.
 
-\lhmoneGR
+\lhmthreeGR
 }
 For (episcopal rank) (name), for the honorable presbyterate, for the
 diaconate in Christ, and for all the clergy and the people, let us
 pray to the Lord.
 
-\lhmone
+\lhmthree
 \end{greekenglish}
 
 \begin{greekenglish}{
@@ -254,24 +300,24 @@ us pray to the Lord.
 Ὑπὲρ τῆς πόλεως ταύτης, πάσης πόλεως, χώρας καὶ τῶν πίστει οἰκούντων
 ἐν αὐταῖς, τοῦ Κυρίου δεηθῶμεν.
 
-\lhmoneGR
+\lhmtwoGR
 }
 For this city, and for every city and land, and for the faithful who
 live in them, let us pray to the Lord.
 
-\lhmone
+\lhmtwo
 \end{greekenglish}
 
 \begin{greekenglish}{
 Ὑπὲρ εὐκρασίας ἀέρων, εὐφορίας τῶν καρπῶν τῆς γῆς, καὶ καιρῶν
 εἰρηνικῶν, τοῦ Κυρίου δεηθῶμεν.
 
-\lhmoneGR
+\lhmthreeGR
 }
 For favorable weather, for an abundance of the fruits of the earth,
 and for peaceful times, let us pray to the Lord.
 
-\lhmone
+\lhmthree
 \end{greekenglish}
 
 \begin{greekenglish}{
@@ -291,12 +337,12 @@ Lord.
 Ὑπὲρ τοῦ ῥυσθῆναι ἡμᾶς ἀπὸ πάσης θλίψεως, ὀργῆς, κινδύνου καὶ ἀνάγκης,
 τοῦ Κυρίου δεηθῶμεν.
 
-\lhmoneGR
+\lhmtwoGR
 }
 For our deliverance from all affliction, wrath, danger, and necessity,
 let us pray to the Lord.
 
-\lhmone
+\lhmtwo
 \end{greekenglish}
 
 
@@ -306,12 +352,12 @@ let us pray to the Lord.
 \begin{greekenglish}{
 Ἀντιλαβοῦ, σῶσον, ἐλέησον καὶ διαφύλαξον ἡμᾶς ὁ Θεὸς τῇ σῇ χάριτι.
 
-\amenoneGR
+\lhmthreeGR
 }
 Help us, save us, have mercy on us, and protect us, O God, by Your
 grace.
 
-\amenone
+\lhmthree
 \end{greekenglish}
 
 \begin{greekenglish}{
@@ -364,12 +410,73 @@ ages.
 \end{greekenglish}
 
 \begin{center}
-(See ``Pickup'' Amen on next page.)
+(See ``Pickup'' Amen on next facing pages.)
 \end{center}
 
 
-\clearpage
+\cleartoleftpage
 
+\begin{center}
+  \selectlanguage{greek}
+  ΠΡΩΤΟΝ ΑΝΤΙΦΩΝΟΝ
+  \selectlanguage{english}
+\end{center}
+\vspace{-1em}
+
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4 g2
+  \time 4/4 g1
+  \time 2/4
+  e4 f
+  \time 6/4
+  g2 g4 g g g
+  \time 4/4
+  a2 g a f g4( a) g f e1
+}
+\addlyrics{Ἀ -- μήν
+  Ταῖς πρεσ- βεί -- αις τῆς Θε -- ο -- τό -- κου, Σῶ -- τερ, σῶ -- σον ἡ -- μᾶς.
+ }
+\end{lilypond}
+
+\vspace{2em}
+\begin[staffsize=25]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  e4 e e f
+  \time 6/4
+  g g g g f g
+  \time 4/4
+  a2 g a f g4( a g f) e1
+}
+\addlyrics{%
+  By the in -- ter -- ces -- sions of the The -- o -- to -- kos, Sav -- ior, save us.}
+\end{lilypond}
+
+\vspace{2em}
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4
+  g4 g
+  \time 6/4
+  a2 g4 f g a
+  \time 8/4
+  a( b) b1 g4 g
+  \time 4/4
+  a2 g4 e f2.( g4 a2 g\fermata)
+}
+\addlyrics{
+  Ταῖς πρεσ- βεί -- αις τῆς Θε -- ο -- τό -- κου, Σῶ -- τερ, σῶ -- σον ἡ -- μᾶς.
+ }
+\end{lilypond}
+
+
+\clearpage
 
 \begin{center}
 \textsc{The First Antiphon}
@@ -386,14 +493,15 @@ ages.
   g1
   e4 e e f
   \time 6/4
-  g g g g g g
+  g g g g f g
   \time 4/4
   a2 g a f g4( a g f) e1
 }
 \addlyrics{A- men
-  By the in- ter- ces- sions of the The- o- to- kos, Sav- ior, save us.}
+  By the in -- ter -- ces -- sions of the The -- o -- to -- kos, Sav -- ior, save us.}
 \end{lilypond}
 
+\vspace{2em}
 \begin[staffsize=25]{lilypond}
 \relative c' {
   \textLengthOn
@@ -406,10 +514,11 @@ ages.
   a2 g a f g4( a) g f e1
 }
 \addlyrics{
-  Ταῖς πρε- σβεί- αις τῆς Θε- ο- τό- κου, Σῶ- τερ, σῶ- σον ἡ- μᾶς.
+  Ταῖς πρεσ -- βεί -- αις τῆς Θε -- ο -- τό -- κου, Σῶ -- τερ, σῶ -- σον ἡ -- μᾶς.
  }
 \end{lilypond}
 
+\vspace{2em}
 \begin[staffsize=25]{lilypond}
 \relative c'' {
   \textLengthOn
@@ -428,10 +537,11 @@ ages.
   a2) g
 }
 \addlyrics{
-  By the in- ter- ces- sions of the The- o- to- kos, Sav- ior, save us.}
+  By the in -- ter -- ces -- sions of the The -- o -- to -- kos, Sav -- ior, save us.}
 \end{lilypond}
 
-\vspace{2em}
+
+\clearpage
 
 \begin{greekenglish}{
 \begin{center}
@@ -457,19 +567,15 @@ Again and again, in peace, let us pray to the Lord.
 \lhmone
 \end{multicols}
 
-
-\clearpage
-
-
 \begin{greekenglish}{
 Ἀντιλαβοῦ, σῶσον, ἐλέησον καὶ διαφύλαξον ἡμᾶς ὁ Θεὸς τῇ σῇ χάριτι.
 
-\amenoneGR
+\lhmtwoGR
 }
 Help us, save us, have mercy on us, and protect us, O God, by Your
 grace.
 
-\amenone
+\lhmtwo
 \end{greekenglish}
 
 \begin{greekenglish}{
@@ -526,8 +632,333 @@ and forever and to the ages of ages.
 \end{greekenglish}
 
 \begin{center}
-(See ``Pickup'' Amen on next page.)
+(See ``Pickup'' Amen on next facing pages.)
 \end{center}
 
+
+\cleartoleftpage
+
+\begin{center}
+  \selectlanguage{greek}
+  ΔΕΥΤΕΡΟΝ ΑΝΤΙΦΩΝΟΝ
+  \selectlanguage{english}
+\end{center}
+\vspace{-1em}
+
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4 g2
+  \time 4/4 g1
+  b2 b4 b b a a g
+  \time 3/4
+  g2.
+  f4 g a
+  \time 4/4
+  b2 a4 g g1
+  a4 f a g g f f e e1
+}
+\addlyrics{Ἀ -- μήν
+  Σῶ -- σον ἡ -- μᾶς Υἱ -- ὲ Θε -- οῦ, ὁ ἀ -- να -- στὰς ἐκ νε -- κρῶν, ψάλ -- λον -- τάς σοι, Ἀλ -- λη -- λού -- ϊ -- α.
+ }
+\end{lilypond}
+
+\hspace{6em}
+\begin{minipage}{.3\textwidth}
+  \selectlanguage{greek}
+  Ἐν ταῖς καθημεριναὶς λειτουργὶαις, ἀντὶ τοῦ <<ὁ αναστὰς ἐκ νεκρῶν>> ψὰλλεται:
+  \selectlanguage{english}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin[staffsize=22]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  %\override Staff.Clef.transparent = ##t
+  %\time 3/4
+  %g2.
+  \time 3/4
+  f4 g a
+  \time 4/4
+  b a a g g1
+}
+\addlyrics{ὁ ἐν ἁ -- γί -- οις θαυ -- μα -- στός,}
+\end{lilypond}
+\end{minipage}
+
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  b2 b4 b b( a) a( g)
+  \time 3/4
+  g2.
+  f4 g a
+  \time 4/4
+  b2 a4 g g1
+  a4 f a g g f f e e1
+}
+\addlyrics{%
+  Save us, O Son of God who did a -- rise from the dead.
+  We sing to you, Al -- le -- lu -- i -- a.}
+\end{lilypond}
+
+\hspace{6em}
+\begin{minipage}{.3\textwidth}
+  On weekdays, replace the words ``risen from the dead'' with:
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin[staffsize=22]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  %\override Staff.Clef.transparent = ##t
+  %\time 3/4
+  %g2.
+  \time 2/4
+  g4 a
+  \time 4/4
+  b a a g g1
+}
+\addlyrics{who are won -- drous in Your Saints.}
+\end{lilypond}
+\end{minipage}
+
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  b2 b4 b b a a g
+  \time 3/4
+  g2.
+  f4 g a
+  \time 4/4
+  b2 a4 g g1
+  a4 f a g g f f e e1
+}
+\addlyrics{%
+  Σῶ -- σον ἡ -- μᾶς Υἱ -- ὲ Θε -- οῦ, ὁ ἀ -- να -- στὰς ἐκ νε -- κρῶν, ψάλ -- λον -- τάς σοι, Ἀλ -- λη -- λού -- ϊ -- α.
+ }
+\end{lilypond}
+
+\hspace{6em}
+\begin{minipage}{.3\textwidth}
+  \selectlanguage{greek}
+  Ἐν ταῖς καθημεριναὶς λειτουργὶαις, ἀντὶ τοῦ <<ὁ αναστὰς ἐκ νεκρῶν>> ψὰλλεται:
+  \selectlanguage{english}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin[staffsize=22]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  %\override Staff.Clef.transparent = ##t
+  %\time 3/4
+  %g2.
+  \time 3/4
+  f4 g a
+  \time 4/4
+  b a a g g1
+}
+\addlyrics{ὁ ἐν ἁ -- γί -- οις θαυ -- μα -- στός,}
+\end{lilypond}
+\end{minipage}
+
+
+\clearpage
+
+\begin{center}
+\textsc{The Second Antiphon}
+\end{center}
+\vspace{-1em}
+
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 2/4
+  g2
+  \time 4/4
+  g1
+  b2 b4 b b( a) a( g)
+  \time 3/4
+  g2.
+  f4 g a
+  \time 4/4
+  b2 a4 g g1
+  a4 f a g g f f e e1
+}
+\addlyrics{A -- men
+  Save us, O Son of God who did a -- rise from the dead.
+  We sing to you, Al -- le -- lu -- i -- a.}
+\end{lilypond}
+
+\hspace{6em}
+\begin{minipage}{.3\textwidth}
+  On weekdays, replace the words ``risen from the dead'' with:
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin[staffsize=22]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  %\override Staff.Clef.transparent = ##t
+  %\time 3/4
+  %g2.
+  \time 2/4
+  g4 a
+  \time 4/4
+  b a a g g1
+}
+\addlyrics{who are won -- drous in Your Saints.}
+\end{lilypond}
+\end{minipage}
+
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \time 4/4
+  b2 b4 b b a a g
+  \time 3/4
+  g2.
+  f4 g a
+  \time 4/4
+  b2 a4 g g1
+  a4 f a g g f f e e1
+}
+\addlyrics{%
+  Σῶ -- σον ἡ -- μᾶς Υἱ -- ὲ Θε -- οῦ, ὁ ἀ -- να -- στὰς ἐκ νε -- κρῶν, ψάλ -- λον -- τάς σοι, Ἀλ -- λη -- λού -- ϊ -- α.
+ }
+\end{lilypond}
+
+\hspace{6em}
+\begin{minipage}{.3\textwidth}
+  \selectlanguage{greek}
+  Ἐν ταῖς καθημεριναὶς λειτουργὶαις, ἀντὶ τοῦ <<ὁ αναστὰς ἐκ νεκρῶν>> ψὰλλεται:
+  \selectlanguage{english}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin[staffsize=22]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  %\override Staff.Clef.transparent = ##t
+  %\time 3/4
+  %g2.
+  \time 3/4
+  f4 g a
+  \time 4/4
+  b a a g g1
+}
+\addlyrics{ὁ ἐν ἁ -- γί -- οις θαυ -- μα -- στός,}
+\end{lilypond}
+\end{minipage}
+
+\begin[staffsize=25]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  b2 b4 b b( a) a( g)
+  \time 3/4
+  g2.
+  f4 g a
+  \time 4/4
+  b2 a4 g g1
+  a4 f a g g f f e e1
+}
+\addlyrics{%
+  Save us, O Son of God who did a -- rise from the dead.
+  We sing to you, Al -- le -- lu -- i -- a.}
+\end{lilypond}
+
+\hspace{6em}
+\begin{minipage}{.3\textwidth}
+  On weekdays, replace the words ``risen from the dead'' with:
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin[staffsize=22]{lilypond}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  %\override Staff.Clef.transparent = ##t
+  %\time 3/4
+  %g2.
+  \time 2/4
+  g4 a
+  \time 4/4
+  b a a g g1
+}
+\addlyrics{who are won -- drous in Your Saints.}
+\end{lilypond}
+\end{minipage}
+
+
+\cleartoleftpage
+
+TODO: DOXA.  Lyrics.
+
+\begin[staffsize=25]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  e4 e e f | g g g g | a a a a | g2. g4 | b a g f |
+  f2 e\fermata |f4 d e f | g g g g | a a g fis | g g e f8( g) |
+  f4( g) g2\fermata | r2 g4 a | a( b) b2( b4) b a b | c c b a| a2 g\fermata |
+  g4 e f g | a2 a4 a | a2 g4\fermata g | b2 a4 g | g f f2 | \time 2/4 e2\fermata |
+  % page 22 (old Prasinarion)
+  e4 f | \time 4/4 g2 g4 g | a2 a | g2. g4 | b4 a g( f) |
+  e d d\fermata( c\fermata)
+}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  g4\fermata g\fermata a b | c2 b4( a) | a a g\fermata g | g g b a |
+  g f e f | g2. g4 | g a b a | g f f\fermata e\fermata | g4( f e2 f4 g a\fermata g\fermata)
+}
+\addlyrics{%
+}
+\end{lilypond}
+
+
+\clearpage
+
+TODO: GLORY.
+
+\begin[staffsize=25]{lilypond}
+\relative c' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  e2 e4 f | g g g g | a2 a2 | g2. g4 | b( a) g( f) |
+  f2( e\fermata) | f4 d e f | g g g g | a a g( fis) | g g e f8( g) |
+  f4( g) g2\fermata | r2 g4 a | a( b) b2( b2) a4 b | c2 b4( a) | a2 g\fermata |
+  g4( e) f g | a2 a2 | a2 g4\fermata g | b2 a4 g | g f f2 | \time 2/4 e2\fermata |
+  % page 22 (old Prasinarion)
+  e4 f | \time 4/4 g2 g4 g | a2 a | g2. g4 | b4 a g( f) |
+  e d d\fermata( c\fermata)
+}
+\addlyrics{%
+  On -- ly be -- got -- ten Son and Word of God im -- mor -- tal one
+  who for our sal -- va -- tion did so hum -- ble your -- self by ta -- king on flesh
+  ta -- king flesh by by the The -- o -- to -- kos and e -- ver Vir -- gin Ma -- ry
+  with -- out change did You be -- come man
+  and were cru -- ci -- fied, Christ our God, but con -- quered death by your death.
+}
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature #'stencil = ##f
+  \set Score.currentBarNumber = #29
+  % Permit first bar number to be printed
+  \bar ""
+  g4\fermata g\fermata a b | c2 b4( a) | a a g\fermata g | g g b a |
+  g f e f | g2. g4 | g a b a | g f f\fermata e\fermata | g4( f e2 f4 g a\fermata) g\fermata
+}
+\addlyrics{%
+  As one of the Ho -- ly Tri -- ni -- ty and be -- ing glo -- ri -- fied to -- ge -- ther
+  with the Fa -- ther and the Ho -- ly Spi -- rit, save us.
+}
+\end{lilypond}
 
 \end{document}
